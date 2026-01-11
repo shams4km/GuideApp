@@ -6,7 +6,7 @@ target 'GuideApp' do
   use_frameworks!
 
   pod 'SwiftGen', '~> 6.0'
-  pod 'SnapKit'
+  # SnapKit is managed via SPM
   pod 'SwiftLint'
 
 end

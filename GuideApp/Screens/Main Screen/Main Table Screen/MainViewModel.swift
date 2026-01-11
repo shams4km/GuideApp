@@ -1,13 +1,20 @@
 import UIKit
 import Combine
+import FirebaseAnalytics
 
 // MARK: - вью модель главной таблицы с ивентами
 
 class MainViewModel {
-    private var eventService = EventService.shared
-    private var locationService = LocationService.shared
+    private var eventService: EventService
+    private var locationService: LocationService
 
     @Published var eventsAreEmpty = true
+
+    init(eventService: EventService = AppContainer.shared.eventService,
+         locationService: LocationService = AppContainer.shared.locationService) {
+        self.eventService = eventService
+        self.locationService = locationService
+    }
 
     var eventsPublisher: AnyPublisher<[Event], Never> {
         return eventService.$events
@@ -121,6 +128,12 @@ extension MainViewModel {
         eventService.events[indexPath.row]
 
         eventService.mainTableSelectedEvent = event
+        
+        Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+            AnalyticsParameterItemID: "id-\(event.id)",
+            AnalyticsParameterItemName: event.title,
+            AnalyticsParameterContentType: "event"
+        ])
     }
 
 }
@@ -142,6 +155,10 @@ extension MainViewModel {
                 .filter { $0.title.lowercased().contains(searchText) }
 
             eventService.saveSearchBarFilteredEvents(with: newFilteredEventsArrayByText)
+            
+            Analytics.logEvent(AnalyticsEventSearch, parameters: [
+                AnalyticsParameterSearchTerm: searchText
+            ])
         }
 
     }

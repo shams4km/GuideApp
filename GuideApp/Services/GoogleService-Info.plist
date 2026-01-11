@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyBBX0Zlcz1rftKRv4rpR5a1T2mV5y39i4Y</string>
+	<string>AIzaSyD4p-5i_pvccdXs8_7023ekXuAgjn4wMT4</string>
 	<key>GCM_SENDER_ID</key>
-	<string>110330734528</string>
+	<string>60790514018</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>yazzgul.My-Events</string>
+	<string>shams.GuideApp</string>
 	<key>PROJECT_ID</key>
-	<string>my-events-4592b</string>
+	<string>guideapp-shams</string>
 	<key>STORAGE_BUCKET</key>
-	<string>my-events-4592b.appspot.com</string>
+	<string>guideapp-shams.firebasestorage.app</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:110330734528:ios:48cf3c16fcb3dc5e5f8a25</string>
+	<string>1:60790514018:ios:15b1778a2fa70af8da4c3b</string>
 </dict>
 </plist>

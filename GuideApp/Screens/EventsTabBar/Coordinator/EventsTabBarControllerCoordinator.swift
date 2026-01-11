@@ -46,7 +46,15 @@ class EventsTabBarControllerCoordinator: BaseCoodinator {
         profileViewControllerCoordinator.navigationController = profileNavigationController
         profileViewControllerCoordinator.start()
 
-        let tabBarControllers = [mainNavigationController, profileNavigationController]
+        let bduiViewController = BDUIViewController()
+        let bduiNavigationController = UINavigationController(rootViewController: bduiViewController)
+        bduiNavigationController.tabBarItem = UITabBarItem(
+            title: "Offers",
+            image: UIImage(systemName: "star.fill"),
+            tag: 3
+        )
+
+        let tabBarControllers = [mainNavigationController, profileNavigationController, bduiNavigationController]
         eventsTabBarController.viewControllers = tabBarControllers
     }
 

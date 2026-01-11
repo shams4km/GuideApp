@@ -63,7 +63,22 @@ extension MainViewController {
     func setupNavigationBar() {
         navigationItem.searchController = contentView.tableSearchController
         navigationItem.hidesSearchBarWhenScrolling = false
+        
+        #if DEBUG
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            title: "Crash",
+            style: .plain,
+            target: self,
+            action: #selector(forceCrash)
+        )
+        #endif
     }
+
+    #if DEBUG
+    @objc func forceCrash() {
+        fatalError("Крашнули приложение по кнопке")
+    }
+    #endif
 }
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

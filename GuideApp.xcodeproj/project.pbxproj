@@ -100,6 +100,10 @@
 		28F2ABCE2C0B3A7100DA57F1 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F2ABCD2C0B3A7100DA57F1 /* FilterViewController.swift */; };
 		28F2ABD12C0B3A8A00DA57F1 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F2ABD02C0B3A8A00DA57F1 /* FilterView.swift */; };
 		28F2ABD32C0B3DE900DA57F1 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F2ABD22C0B3DE900DA57F1 /* FilterTableViewCell.swift */; };
+		D53E2B432F0FEA75007E5731 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 282EC4F82BAB1B8E00B1F7BA /* SnapKit */; };
+		D53E2B4B2F0FEF12007E5731 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53E2B4A2F0FEF12007E5731 /* AppContainer.swift */; };
+		D53E2B4D2F0FEF6B007E5731 /* bdui_screen.json in Resources */ = {isa = PBXBuildFile; fileRef = D53E2B4C2F0FEF6B007E5731 /* bdui_screen.json */; };
+		D53E2B502F0FEFA9007E5731 /* BDUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53E2B4E2F0FEFA9007E5731 /* BDUIViewController.swift */; };
 		DC0E5F4B8EDE67A989C64B0E /* Pods_GuideApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA151614C19556F55DD3E78D /* Pods_GuideApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -173,6 +177,9 @@
 		28F2ABCD2C0B3A7100DA57F1 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		28F2ABD02C0B3A8A00DA57F1 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		28F2ABD22C0B3DE900DA57F1 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
+		D53E2B4A2F0FEF12007E5731 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		D53E2B4C2F0FEF6B007E5731 /* bdui_screen.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bdui_screen.json; sourceTree = "<group>"; };
+		D53E2B4E2F0FEFA9007E5731 /* BDUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDUIViewController.swift; sourceTree = "<group>"; };
 		E0E1230843C486FBFF160842 /* Pods-GuideApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuideApp.release.xcconfig"; path = "Target Support Files/Pods-GuideApp/Pods-GuideApp.release.xcconfig"; sourceTree = "<group>"; };
 		FA151614C19556F55DD3E78D /* Pods_GuideApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuideApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -182,6 +189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D53E2B432F0FEA75007E5731 /* SnapKit in Frameworks */,
 				289A28932BD061B300A5F863 /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
 				289A28832BD061B300A5F863 /* FirebaseDatabaseSwift in Frameworks */,
 				289A28812BD061B300A5F863 /* FirebaseDatabase in Frameworks */,
@@ -219,6 +227,7 @@
 		282645872BD405C500DF7495 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				D53E2B4F2F0FEFA9007E5731 /* BDUIScreen */,
 				28A706662BD571FB00298FEC /* EventsTabBar */,
 				282645882BD41BC200DF7495 /* Favourites Screen */,
 				2877E4F42BCEC914002B160D /* Profile Screen */,
@@ -364,6 +373,7 @@
 				284F36E12C02809C00BB429E /* FirestoreDatabaseService.swift */,
 				284F36E32C02A78E00BB429E /* UserService.swift */,
 				28DAB0EC2C079925009F51FB /* StorageService.swift */,
+				D53E2B4A2F0FEF12007E5731 /* AppContainer.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -371,6 +381,7 @@
 		28A706452BD523AF00298FEC /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				D53E2B4C2F0FEF6B007E5731 /* bdui_screen.json */,
 				288FA65F2BA9D49500BE9195 /* LaunchScreen.storyboard */,
 				288FA65D2BA9D49500BE9195 /* Assets.xcassets */,
 			);
@@ -653,6 +664,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D53E2B4F2F0FEFA9007E5731 /* BDUIScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D53E2B4E2F0FEFA9007E5731 /* BDUIViewController.swift */,
+			);
+			path = BDUIScreen;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -665,7 +684,6 @@
 				288FA64E2BA9D49300BE9195 /* Frameworks */,
 				288FA64F2BA9D49300BE9195 /* Resources */,
 				282EC5012BAB208900B1F7BA /* SwiftLint */,
-				4CC539F7290DA33239C996A1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -674,7 +692,6 @@
 			name = GuideApp;
 			packageProductDependencies = (
 				282EC4F82BAB1B8E00B1F7BA /* SnapKit */,
-				282EC4FA2BAB1B8E00B1F7BA /* SnapKit-Dynamic */,
 				289A286E2BD061B300A5F863 /* FirebaseAnalytics */,
 				289A28702BD061B300A5F863 /* FirebaseAnalyticsOnDeviceConversion */,
 				289A28722BD061B300A5F863 /* FirebaseAnalyticsSwift */,
@@ -752,6 +769,7 @@
 				288FA6612BA9D49500BE9195 /* LaunchScreen.storyboard in Resources */,
 				288FA65E2BA9D49500BE9195 /* Assets.xcassets in Resources */,
 				28A706442BD5229500298FEC /* GoogleService-Info.plist in Resources */,
+				D53E2B4D2F0FEF6B007E5731 /* bdui_screen.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -775,23 +793,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n  exit 1\nfi\n";
-		};
-		4CC539F7290DA33239C996A1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GuideApp/Pods-GuideApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GuideApp/Pods-GuideApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GuideApp/Pods-GuideApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 		F2AC0DFA36FFAABE33ADD40F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -871,6 +872,7 @@
 				28CCEBD02BFE63650043A916 /* EventService.swift in Sources */,
 				283468842BFB8FF5009230CF /* EndPoint.swift in Sources */,
 				287809C42BC473F000FA737B /* StartView.swift in Sources */,
+				D53E2B4B2F0FEF12007E5731 /* AppContainer.swift in Sources */,
 				28A706502BD52A9400298FEC /* Coordinator.swift in Sources */,
 				28B228DB2C0389E000A1F804 /* FavouritesTableDetailViewController.swift in Sources */,
 				28F2ABCE2C0B3A7100DA57F1 /* FilterViewController.swift in Sources */,
@@ -878,6 +880,7 @@
 				28DAB0E92C078399009F51FB /* EditProfileViewController.swift in Sources */,
 				28F2ABD32C0B3DE900DA57F1 /* FilterTableViewCell.swift in Sources */,
 				2826458D2BD41C2200DF7495 /* FavouritesView.swift in Sources */,
+				D53E2B502F0FEFA9007E5731 /* BDUIViewController.swift in Sources */,
 				28A706692BD58F2800298FEC /* AuthService.swift in Sources */,
 				28DAB0EB2C0783A7009F51FB /* EditProfileView.swift in Sources */,
 				2834688D2BFBC482009230CF /* NetworkServiceProtocol.swift in Sources */,
@@ -1126,11 +1129,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 282EC4F72BAB1B8E00B1F7BA /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		282EC4FA2BAB1B8E00B1F7BA /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 282EC4F72BAB1B8E00B1F7BA /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
 		};
 		289A286E2BD061B300A5F863 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
